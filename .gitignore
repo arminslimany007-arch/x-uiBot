@@ -1,0 +1,26 @@
+.env
+data/
+dist/
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.idea/
+.vscode/
+*.db
+# pytest
+.pytest_cache/
+.coverage
+htmlcov/
+
+# debug session logs (agent_debug.py)
+debug-*.log
+*.log
+
+# OS / editor (اختیاری ولی مفید)
+.DS_Store
+Thumbs.db
+
+debug-dd4a47.log
+# Keep the existing database seed in the private deployment repository
+!data-seed/bot.db

@@ -1,0 +1,146 @@
+"""Single source of truth for reply/inline button labels (with emoji)."""
+
+# Reply keyboard — admin
+LIST_RESELLERS = "📋 لیست ریسلرها"
+REPORTS = "📈 گزارش‌گیری"
+SERVICE_TEMPLATES = "📐 قالب‌های سرویس"
+SET_PANEL_RESELLER = "🔄 تغییر پنل ریسلر"
+PANELS = "🖥 پنل‌ها"
+ADMIN_HELP = "❓ راهنمای ادمین"
+BROADCAST = "📢 پیام همگانی"
+BOT_UPDATE = "⬆️ آپدیت ربات"
+BACKUP = "💾 پشتیبان"
+PREVIEW_GUEST_MODE = "👁 پیش‌نمایش حالت میهمان"
+
+# Reply keyboard — reseller
+CREATE_SERVICE = "✨ ساخت سرویس"
+MY_SERVICES = "📱 سرویس‌های من"
+ACCOUNT_STATUS = "👤 وضعیت حساب"
+
+# Common actions
+BACK = "◀️ بازگشت"
+PREV_PAGE = "◀ قبلی"
+NEXT_PAGE = "بعدی ▶"
+REFRESH = "🔄 بروزرسانی"
+CANCEL = "❌ لغو"
+CONFIRM = "✅ تأیید"
+YES_DELETE = "✅ بله، حذف"
+YES_DELETE_FULL = "✅ بله، حذف کامل"
+YES_DELETE_TEMPLATE = "✅ بله، حذف شود"
+YES_DELETE_SERVICE = "✅ بله، حذف کن"
+YES_RESET = "✅ بله، ریست کن"
+NO = "↩️ خیر"
+SAVE = "💾 ذخیره"
+CONTINUE = "➡️ ادامه"
+
+# Add / register
+ADD_PANEL = "➕ افزودن پنل"
+ADD_RESELLER = "➕ افزودن ریسلر"
+ADD_TEMPLATE = "➕ افزودن قالب جدید"
+REGISTER_PANEL = "✅ ثبت پنل"
+REGISTER_TEMPLATE = "✅ ثبت قالب"
+REGISTER_RESELLER = "✅ ثبت ریسلر"
+
+# Panel
+DELETE_PANEL = "🗑 حذف پنل"
+EDIT_PANEL = "✏️ ویرایش پنل"
+EDIT_PANEL_NAME = "🏷 نام پنل"
+EDIT_PANEL_URL = "🌐 آدرس پنل"
+EDIT_PANEL_TOKEN = "🔑 توکن API"
+EDIT_PANEL_SUB = "🔗 آدرس ساب عمومی"
+CLEAR_SUB_URL = "بدون آدرس ساب عمومی"
+LIST_INBOUNDS = "🔌 لیست اینباندها"
+SKIP_PUBLIC_SUB = "⏭ بدون آدرس ساب عمومی"
+
+# Reseller management
+EDIT_RESELLER = "✏️ ویرایش ریسلر"
+MANAGE_PANELS = "🖥 مدیریت پنل‌ها"
+ADD_PANEL_ASSIGNMENT = "➕ افزودن پنل"
+CHANGE_PANEL = "🔄 تغییر پنل"
+DELETE_RESELLER = "🗑 حذف ریسلر"
+NO_DISPLAY_NAME = "⏭ بدون نام"
+UNLIMITED_MAX_CLIENTS = "♾ نامحدود (حذف محدودیت)"
+
+# Reseller edit menu
+EDIT_QUOTA = "📊 سقف حجم (GB)"
+EDIT_ADD_QUOTA = "➕ افزودن سقف"
+EDIT_SUBTRACT_QUOTA = "➖ کاهش سقف"
+RESET_QUOTA_USAGE = "🔄 ریست مصرف (پکیج جدید)"
+EDIT_MAX_CLIENTS = "🔢 سقف تعداد سرویس"
+EDIT_DISPLAY_NAME = "🏷 نام نمایشی"
+EDIT_ALLOWED_INBOUNDS = "🔌 اینباندهای مجاز"
+EDIT_ATTACH_INBOUNDS = "🔗 اینباندهای متصل"
+
+# Template wizard
+USE_SUGGESTED_NAME = "💡 استفاده از نام پیشنهادی"
+UNLIMITED_EXPIRY = "♾ نامحدود"
+
+# Service creation / detail
+MANUAL_ENTRY = "⌨️ ورود دستی"
+RANDOM_NAME = "🎲 نام تصادفی"
+LINK = "🔗 لینک"
+TRAFFIC = "📈 ترافیک"
+QR_CONFIG = "📲 QR کانفیگ"
+CHANGE_EXPIRY = "📅 تغییر انقضا"
+ADD_TRAFFIC = "➕ افزودن ترافیک"
+REDUCE_TRAFFIC = "➖ کاهش ترافیک"
+EDIT_SERVICE = "✏️ ویرایش سرویس"
+DELETE = "🗑 حذف"
+RESET_TRAFFIC = "🔄 ریست ترافیک"
+EDIT_LIMIT_IP = "🔢 limitIp"
+EDIT_COMMENT = "💬 کامنت"
+ADD_DAYS = "➕ افزودن روز"
+NEW_DATE = "📅 تاریخ جدید"
+SEARCH = "🔍 جستجو"
+CLEAR_SEARCH = "❌ حذف فیلتر"
+
+# Guest plans (admin)
+GUEST_PLANS = "🛍 پلن‌های میهمان"
+GUEST_SALES_SETTINGS = "⚙️ تنظیمات فروش میهمان"
+ADD_PLAN = "➕ افزودن پلن جدید"
+REGISTER_PLAN = "✅ ثبت پلن"
+CHANGE_GUEST_PANEL = "🔄 تغییر پنل/اینباند"
+CHANGE_CARD_NUMBER = "💳 تغییر شماره کارت"
+CHANGE_CARD_HOLDER = "🏷 تغییر نام صاحب کارت"
+
+# Guest (buyer-facing)
+BUY_ACCOUNT = "🛒 خرید اکانت"
+MY_ORDERS = "📦 سفارش‌های من"
+SUPPORT = "🆘 پشتیبانی"
+
+
+def active_toggle_label(*, is_active: bool) -> str:
+    return "⏸ غیرفعال کردن" if is_active else "🔛 فعال کردن"
+
+
+def panel_create_toggle_label(*, allowed: bool) -> str:
+    return "⏸ ممنوع کردن ساخت" if allowed else "🔛 مجاز کردن ساخت"
+
+
+def guest_sales_toggle_label(*, is_enabled: bool) -> str:
+    return "⏸ غیرفعال کردن فروش" if is_enabled else "🔛 فعال کردن فروش"
+
+
+def plan_toggle_label(*, is_active: bool) -> str:
+    return "⏸ غیرفعال کردن" if is_active else "🔛 فعال کردن"
+
+
+def reseller_hub_row_label(
+    name: str, panel_name: str, *, is_active: bool, max_len: int = 40
+) -> str:
+    dot = "🟢" if is_active else "🔴"
+    label = f"{dot} {name} — {panel_name}"
+    if len(label) > max_len:
+        label = label[: max_len - 3] + "..."
+    return label
+
+
+def panel_hub_row_label(
+    panel_id: int, name: str, *, is_active: bool, max_len: int = 40
+) -> str:
+    dot = "🟢" if is_active else "🔴"
+    status = "فعال" if is_active else "غیرفعال"
+    label = f"{dot} #{panel_id} {name} ({status})"
+    if len(label) > max_len:
+        label = label[: max_len - 3] + "..."
+    return label
