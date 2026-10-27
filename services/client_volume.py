@@ -1,4 +1,4 @@
-MIN_CLIENT_VOLUME_GB = 20.0
+MIN_CLIENT_VOLUME_GB = 0.1
 
 
 class ClientVolumeTooLowError(ValueError):

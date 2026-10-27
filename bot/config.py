@@ -29,7 +29,7 @@ class Settings(BaseSettings):
     database_url: str = "sqlite+aiosqlite:///./data/bot.db"
     create_rate_limit: int = 5
     guest_order_rate_limit: int = 3
-    quota_refund_max_traffic_gb: float = 1.0
+    quota_refund_max_traffic_gb: float = 0.2
 
     usage_alert_enabled: bool = False
     usage_alert_interval_seconds: int = 300
